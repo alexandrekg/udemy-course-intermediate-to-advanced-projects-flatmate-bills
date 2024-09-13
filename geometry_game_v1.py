@@ -34,3 +34,12 @@ print("Coordenadas do retângulo: ",
       rectangle.point1.y, "and",
       rectangle.point2.x, ", ",
       rectangle.point2.y)
+
+
+# Pegar ponto e área do usuário
+user_point = Point(float(input("Adivinhe X: ")), float(input("Advinhe Y:")))
+user_area = float(input("Advinhe a área do retângulo: "))
+
+# Mostrar o resultado do jogo
+print("Seu ponto estava dentro do retângulo: ", user_point.falls_in_rectangle(rectangle))
+print("Sua área estava fora por: ", rectangle.area() - user_area)
