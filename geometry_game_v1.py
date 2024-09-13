@@ -1,3 +1,6 @@
+from random import randint
+
+
 class Point:
     def __init__(self, x, y):
         self.x = x
@@ -20,3 +23,14 @@ class Rectangle:
         return (self.point2.x - self.point1.x) * \
             (self.point2.y - self.point1.y)
 
+
+# Criar objeto retângulo
+rectangle = Rectangle(Point(randint(0, 9), randint(0, 9)),
+                      Point(randint(10, 19), randint(10, 19)))
+
+# Printar coordenadas do retângulo
+print("Coordenadas do retângulo: ",
+      rectangle.point1.x, ", ",
+      rectangle.point1.y, "and",
+      rectangle.point2.x, ", ",
+      rectangle.point2.y)
